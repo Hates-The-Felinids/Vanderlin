@@ -42,7 +42,7 @@
 	backr = /obj/item/storage/backpack/rogue/satchel	// lack of satchel requires dealing with the merchant to correct, which requires entering town; not ideal. N.
 
 	if(H.mind)
-		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -53,7 +53,7 @@
 		H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-		H.change_stat("strength", 2)
+		H.change_stat("strength", 3)
 		H.change_stat("intelligence", -2)
 		H.change_stat("endurance", 2)
 		H.change_stat("constitution", 1)
@@ -63,3 +63,4 @@
 		if(H.dna.species.id == "human")
 			H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
+ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
